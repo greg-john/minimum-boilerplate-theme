@@ -1,15 +1,87 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "search-result-layout.customQuery#home",
+      "rich-text",
+      "info-card#button-right",
+      "info-card#button-left"
+    ]
+  },
+  "search-result-layout.customQuery#home": {
+    "blocks": [
+      "search-result-layout.desktop#home"
+    ],
+    "props": {
+      "querySchema": {
+        "maxItemsPerPage": 10,
+        "queryField": "Oven",
+        "skusFilter": "ALL_AVAILABLE",
+        "simulationBehavior": "default",
+        "mapField": "ft"
+      }
+    }
+  },
+  "search-result-layout.desktop#home": {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "flex-layout.row#top",
+      "search-fetch-previous",
+      "flex-layout.row#results",
+      "search-fetch-more"
+    ]
+  },
+  "flex-layout.row#top": { 
+    "children": [
+      "total-products.v2",
+      "order-by.v2"
+    ]
+  },
+  "flex-layout.row#results": { 
+    "children": [ 
+      "flex-layout.col#filter",
+      "search-content"
+    ]
+  },
+  "flex-layout.col#filter": { 
+    "props": {
+      "width": "20%"
+    },
+    "children": [
+      "filter-navigator.v3"
     ]
   },
   "rich-text": { 
     "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
+      "text": "**Hello, World!**",
       "textPosition": "CENTER",
       "font": "t-heading-1"
+    }
+  },
+  "info-card#button-right": {
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
+      "headline": "Vintage Pink",
+      "subhead": "Give your kitchen a boho style adding vintage apparels.<br>Available until January 2020.",
+      "callToActionMode": "button",
+      "callToActionText": "Explore",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center"
+    }
+  },
+  "info-card#button-left": {
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
+      "headline": "Shining Chrome",
+      "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.",
+      "callToActionMode": "link",
+      "callToActionText": "Go to Collection",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center"
     }
   }
 }
