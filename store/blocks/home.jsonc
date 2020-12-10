@@ -1,12 +1,21 @@
 {
   "store.home": { 
     "blocks": [
+      "stack-layout#cta",
+      "list-context.product-list",
+      "modal-trigger#first",
+      "tab-layout#home",
+      "responsive-layout.desktop#desktop",
+      "responsive-layout.mobile#mobile",
+      "slider-layout#gdj-landing",
+      "flex-layout.row#gdj-landing",
       "search-result-layout.customQuery#home",
       "rich-text",
       "info-card#button-right",
       "info-card#button-left"
     ]
   },
+
   "search-result-layout.customQuery#home": {
     "blocks": [
       "search-result-layout.desktop#home"
@@ -17,10 +26,21 @@
         "queryField": "Oven",
         "skusFilter": "ALL_AVAILABLE",
         "simulationBehavior": "default",
-        "mapField": "ft"
+        "mapField": "ft",
+        "hiddenFacets": {
+          "specificationFilters": {
+            "hideAll": false,
+            "hiddenFilters": [
+              {
+                "name": "voltage"
+              }
+            ]
+          }
+        }
       }
     }
   },
+
   "search-result-layout.desktop#home": {
     "children": [
       "breadcrumb.search",
@@ -31,18 +51,21 @@
       "search-fetch-more"
     ]
   },
+
   "flex-layout.row#top": { 
     "children": [
       "total-products.v2",
       "order-by.v2"
     ]
   },
+
   "flex-layout.row#results": { 
     "children": [ 
       "flex-layout.col#filter",
       "search-content"
     ]
   },
+
   "flex-layout.col#filter": { 
     "props": {
       "width": "20%"
@@ -51,6 +74,7 @@
       "filter-navigator.v3"
     ]
   },
+
   "rich-text": { 
     "props": { 
       "text": "**Hello, World!**",
@@ -58,6 +82,7 @@
       "font": "t-heading-1"
     }
   },
+
   "info-card#button-right": {
     "props": {
       "isFullModeStyle": false,
@@ -71,6 +96,7 @@
       "textAlignment": "center"
     }
   },
+
   "info-card#button-left": {
     "props": {
       "isFullModeStyle": false,
@@ -82,6 +108,162 @@
       "callToActionText": "Go to Collection",
       "callToActionUrl": "/sale/d",
       "textAlignment": "center"
+    }
+  },
+
+  "tab-layout#home": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ]
+  },
+
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#home1",
+      "tab-list.item#home2"
+      ]
+  },
+
+  "tab-list.item#home1": {
+    "props": {
+      "tabId": "majorAppliances",
+      "label": "Major Appliances",
+      "defaultActiveTab": true
+    }
+  },
+
+  "tab-list.item#home2": {
+    "props": {
+      "tabId": "electronics",
+      "label": "Electronics"
+    }
+  },
+
+  "tab-content#home": {
+    "children": [
+      "tab-content.item#home1",
+      "tab-content.item#home2"
+      ]
+  },
+
+  "tab-content.item#home1": {
+    "children": [
+      "rich-text#home1"
+    ],
+    "props": {
+      "tabId": "majorAppliances",
+      "defaultActiveTab": true
+    }
+  },
+
+  "tab-content.item#home2": {
+    "children": [
+      "rich-text#home2"
+    ],
+    "props": {
+      "tabId": "electronics"
+    }
+  },
+
+  "rich-text#home1": {
+    "props": {
+      "text": "Text for Major Appliances",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+
+  "rich-text#home2": {
+    "props": {
+      "text": "Text for Electronics",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+
+  "modal-trigger#first": {
+    "children": [
+      "rich-text#trigger",
+      "modal-layout#first"
+    ]
+  },
+
+  "rich-text#trigger": {
+    "props": {
+      "text": "CLICK ME"
+    }
+  },
+
+  "modal-layout#first": {
+    "children": [
+      "rich-text#hello"
+    ]
+  },
+
+  "rich-text#hello": {
+    "props": {
+      "text": "HELLO"
+    }
+  },
+
+  "list-context.product-list": {
+    "blocks": [
+      "product-summary.shelf#home"
+    ],
+    "children": ["slider-layout"]
+  },
+
+  "product-summary.shelf#home": {
+    "children": [
+      "modal-trigger#quickview",
+      "product-summary-name",
+      "product-selling-price"
+    ]
+  },
+
+  "modal-trigger#quickview": {
+    "children": [
+      "product-summary-image",
+      "modal-layout#quickview"
+    ]
+  },
+
+  "modal-layout#quickview": {
+    "children": [
+      "product-summary-name",
+      "product-images",
+      "product-summary-sku-selector",
+      "product-summary-quantity",
+      "add-to-cart-button"
+    ]
+  },
+
+  "stack-layout#cta": {
+    "children": [
+      "image#cta",
+      "link#cta"
+    ]
+  },
+
+  "image#cta": {
+    "props": {
+      "blockClass": "cover",
+      "width": "100%",
+      "height": 400,
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg"
+    }
+  },
+
+  "link#cta": {
+    "props": {
+      "displayMode": "button",
+      "buttonProps": {
+        "variant": "primary",
+        "size": "large"
+      },
+      "href": "/washer",
+      "label": "Check these awesome discounts"
     }
   }
 }
