@@ -1,5 +1,9 @@
 {
     "store.custom#gdj-landing": {
       "path": "/gdj-landing"
-    }
+    },
+
+    "store.custom#about-us": {
+      "path": "/about-us"
+    }    
 }

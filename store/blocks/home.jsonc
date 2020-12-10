@@ -23,7 +23,7 @@
     "props": {
       "querySchema": {
         "maxItemsPerPage": 10,
-        "queryField": "Oven",
+        "queryField": "Refrigerator",
         "skusFilter": "ALL_AVAILABLE",
         "simulationBehavior": "default",
         "mapField": "ft",
