@@ -1,6 +1,7 @@
 {
   "store.custom#gdj-landing": { 
     "blocks": [
+      "countdown",
       "search-result-layout.customQuery#landingbanner",
       "rich-text#gdj-landing",
       "info-card#clearance",
